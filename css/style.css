@@ -1,7 +1,7 @@
 /* VARIABLES */
 .header {
   height: 200px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .header .nav {
@@ -12,6 +12,7 @@
 }
 
 .header .nav .logo {
+  font-size: 32px;
   -ms-flex: 2;
       flex: 2;
 }
