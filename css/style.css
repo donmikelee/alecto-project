@@ -1,25 +1,226 @@
 /* VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .header {
-  height: 200px;
+  height: 100vh;
+  width: 100%;
   padding-top: 40px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background: url(../../images/header-bg/pexels-stein-egil-liland-5740842.jpg) top right no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  color: #FFFFFF;
 }
 
 .header .nav {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  width: 100%;
 }
 
 .header .nav .logo {
   font-size: 32px;
-  -ms-flex: 2;
-      flex: 2;
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.header .nav .logo span {
+  font-size: 32px;
+  color: #17DAA2;
 }
 
 .header .nav .nav-words {
+  -ms-flex: 3;
+      flex: 3;
+  text-align: center;
+  position: relative;
+}
+
+.header .nav .nav-words ul {
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.header .nav .nav-words ul li {
+  display: inline-block;
+  margin-left: 60px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.header .nav .search-log {
   -ms-flex: 1;
       flex: 1;
+  max-width: 100px;
+  padding-left: 60px;
+}
+
+.header .nav .search-log input[type=text] {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+}
+
+.header .nav .search-log input[type=text]:-ms-input-placeholder {
+  color: white;
+}
+
+.header .nav .search-log input[type=text]::placeholder {
+  color: white;
+}
+
+.header-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.header-content .container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-item > div {
+  height: 400px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  padding-top: 160px;
+}
+
+.carousel-item > div span {
+  font-weight: 400;
+}
+
+.carousel-item > div h1 {
+  font-weight: 100;
+}
+
+.carousel-item > div p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-container {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 500%;
+  transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.carousel-item {
+  position: relative;
+  float: left;
+  width: 20%;
+}
+
+/* Next / Prev Buttons */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  opacity: 0.7;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  transform: translate(0, -50%);
+  text-align: center;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-prev i,
+.carousel-next i {
+  position: absolute;
+  z-index: 15;
+}
+
+.carousel-prev {
+  left: 2%;
+  padding-right: 3px;
+}
+
+.carousel-prev::before {
+  content: '\f053';
+  font-family: "FontAwesome";
+}
+
+.carousel-next {
+  right: 2%;
+  padding-left: 3px;
+}
+
+.carousel-next::before {
+  content: '\f054';
+  font-family: "FontAwesome";
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  opacity: 1;
+}
+
+/* Pagination */
+.carousel-pagination {
+  list-style: none;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-bullet {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  cursor: pointer;
+  margin: 0 7px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition-property: transform, opacity, background-color;
+  transition-duration: 0.3s;
+}
+
+.carousel-bullet:hover {
+  transform: scale(1.3);
+}
+
+.carousel-bullet.active-bullet,
+.carousel-bullet.active-bullet:hover {
+  opacity: 1;
+  transform: scale(1.3);
+  background-color: #fff;
+  cursor: default;
 }
 
 *, *::after, *::before {
@@ -31,6 +232,6 @@
 
 .wrapper {
   width: 100%;
-  padding: 0 300px;
+  min-height: 1000px;
 }
 /*# sourceMappingURL=style.css.map */

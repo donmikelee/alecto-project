@@ -1,17 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+
 .header{
-    height: 200px;
+    height: 100vh;
+    width: 100%;
     padding-top: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background: url(../../images/header-bg/pexels-stein-egil-liland-5740842.jpg) top right no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: contain;
+    color: $color-white;
 
     .nav{
         display: flex;
-        flex-direction: column;
+        width: 100%;
 
         .logo{
             font-size: $font-size-h1;
-            flex: 2;
+            flex: 1;
+
+            span{
+                font-size: $font-size-h1;
+                color: $color-main;
+            }
         }
         .nav-words{
+            flex: 3;
+            text-align: center;
+            position: relative;
+            ul{
+                position: absolute;
+                right: 0;
+                text-align: center;
+
+                li{
+                    display: inline-block;
+                    margin-left: 60px;
+                    text-transform: uppercase;
+                    font-weight: $black;
+                    font-size: $font-size-h3;
+                    cursor: pointer;
+                }
+            }
+        }
+        .search-log{
             flex: 1;
+            max-width: 100px;
+            padding-left: 60px;
+            input[type=text] {
+                background-color: transparent;
+                border: none;
+                color: $color-white;
+                font-family: 'Lato', sans-serif;
+
+                &::placeholder{
+                    color: white;
+                }
+              }
         }
     }
+}
+
+.header-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .container{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+.carousel-item > div {
+    height: 400px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    padding-top: 160px;
+
+    span{
+        font-weight: $regular;
+    }
+
+    h1{
+        font-weight: $thin;
+    }
+
+    p{
+        margin-top: 20px;
+        font-size: $font-size-p;
+    }
+}
+
+.item-1 {
+    // background-color: #3498db;
+}
+
+.item-2 {
+    // background-color: #B22222;
+}
+
+.item-3 {
+    // background-color: #006400;
+}
+
+.item-4 {
+    // background-color: #FFD700;
+}
+
+.item-5 {
+    // background-color: #FF4500;
+}
+
+
+/* Carousel */
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-container {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 500%;
+    transition: transform 0.3s cubic-bezier(.694, .0482, .335, 1);
+}
+
+.carousel-item {
+    position: relative;
+    float: left;
+    width: 20%;
+}
+
+/* Next / Prev Buttons */
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    opacity: 0.7;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+    
+    i{
+        position: absolute;
+        z-index: 15;
+    }
+}
+
+.carousel-prev {
+    left: 2%;
+    padding-right: 3px;
+}
+
+.carousel-prev::before {
+    content: '\f053';
+    font-family: "FontAwesome";
+}
+
+.carousel-next {
+    right: 2%;
+    padding-left: 3px;
+}
+
+.carousel-next::before {
+    content: '\f054';
+    font-family: "FontAwesome";
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    opacity: 1;
+}
+
+/* Pagination */
+
+.carousel-pagination {
+    list-style: none;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    cursor: pointer;
+    margin: 0 7px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition-property: transform, opacity, background-color;
+    transition-duration: 0.3s;
+}
+
+.carousel-bullet:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.carousel-bullet.active-bullet, 
+.carousel-bullet.active-bullet:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    background-color: #fff;
+    cursor: default;
 }
