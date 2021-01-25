@@ -1,0 +1,16 @@
+.header{
+    height: 200px;
+    padding-top: 20px;
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+
+        .logo{
+            flex: 2;
+        }
+        .nav-words{
+            flex: 1;
+        }
+    }
+}

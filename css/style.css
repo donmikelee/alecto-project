@@ -1,0 +1,35 @@
+/* VARIABLES */
+.header {
+  height: 200px;
+  padding-top: 20px;
+}
+
+.header .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.header .nav .logo {
+  -ms-flex: 2;
+      flex: 2;
+}
+
+.header .nav .nav-words {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 300px;
+}
+/*# sourceMappingURL=style.css.map */
