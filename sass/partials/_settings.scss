@@ -2,11 +2,12 @@
 
 $color-main: #17DAA2;
 $color-black: #333;
-$color-gray: #FAFAFA;
+$color-gray: #f0f0f0;
 $color-white: #FFFFFF;
-$color-h1: #7C8790;
+$color-h1: #61686d;
 $color-p: #9DA9B1;
-$color-logo: #8995A1;
+$color-logo-bg: #d6d7d8;
+$color-logo: #5f6368;
 
 $thin: 100;
 $light: 300;
@@ -14,9 +15,27 @@ $regular: 400;
 $bold: 700;
 $black: 900;
 
+$header-photo: url(../../images/header-bg/pexels-stein-egil-liland-5740842.jpg);
+$carousel-photo: url(../../images/carousele-img/office.jpg);
+
+$padding-side: 200px;
+$margin-basic: 40px;
+
 $font-size-h1: 32px;
-$font-size-h2: 32px;
+$font-size-h2: 48px;
 $font-size-h3: 12px;
 $font-size-p: 16px;
+$font-size-logo: 48px;
 
 
+.btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: $color-main;
+    font-size: 16px;
+    color: $color-white;
+    font-weight: $bold;
+    cursor: pointer;
+}

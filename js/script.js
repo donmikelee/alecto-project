@@ -45,3 +45,6 @@ prevBtn.addEventListener('click', handlePrevBtnClick);
 nextBtn.addEventListener('click', handleNextBtnClick);
 
 pagination.addEventListener('click', handlePagination);
+
+
+/* SECOND SLIDER */
