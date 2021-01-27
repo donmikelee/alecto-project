@@ -227,13 +227,30 @@
 
     .carousel-item-about-us > div {
         height: 400px;
-        font-size: 1.5em;
         text-align: center;
         color: #fff;
-        padding-top: 160px;
+        padding-top: $padding-side/2;
+
+        .item-photo{
+            height: 75px;
+            width: 75px;
+            background-color: $color-gray;
+            margin: 0 auto;
+            border-radius: 50%;
+            margin-bottom: $margin-basic;
+            background-image: $slider-photo;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+
+            img{
+                height: 94px;
+                width: 75px;
+            }
+        }
     
         span{
-            font-weight: $regular;
+            color: $color-main;
         }
     
         h1{
@@ -243,6 +260,7 @@
         p{
             margin-top: 20px;
             font-size: $font-size-p;
+            color: $color-p;
         }
     }
 

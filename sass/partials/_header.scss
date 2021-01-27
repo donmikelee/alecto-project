@@ -68,7 +68,7 @@
     height: 100%;
     position: relative;
 
-    .container{
+    .container-header{
         position: absolute;
         top: 40%;
         left: 50%;
@@ -76,7 +76,7 @@
         width: 1000px;
         margin: 0 auto;
 
-        .carousel-item > div {
+        .carousel-item-header > div {
             height: 400px;
             font-size: 1.5em;
             text-align: center;
@@ -121,13 +121,13 @@
         /* Carousel */
         
         
-        .carousel {
+        .carousel-header {
             position: relative;
             overflow: hidden;
             width: 100%;
         }
         
-        .carousel-container {
+        .carousel-container-header {
             list-style: none;
             overflow: hidden;
             padding: 0;
@@ -136,7 +136,7 @@
             transition: transform 0.3s cubic-bezier(.694, .0482, .335, 1);
         }
         
-        .carousel-item {
+        .carousel-item-header {
             position: relative;
             float: left;
             width: 20%;
@@ -144,8 +144,8 @@
         
         /* Next / Prev Buttons */
         
-        .carousel-prev,
-        .carousel-next {
+        .carousel-prev-header,
+        .carousel-next-header {
             position: absolute;
             top: 50%;
             background-color: transparent;
@@ -169,34 +169,34 @@
             }
         }
         
-        .carousel-prev {
+        .carousel-prev-header {
             left: 2%;
             padding-right: 3px;
         }
         
-        .carousel-prev::before {
+        .carousel-prev-header::before {
             content: '\f053';
             font-family: "FontAwesome";
         }
         
-        .carousel-next {
+        .carousel-next-header {
             right: 2%;
             padding-left: 3px;
         }
         
-        .carousel-next::before {
+        .carousel-next-header::before {
             content: '\f054';
             font-family: "FontAwesome";
         }
         
-        .carousel-prev:hover,
-        .carousel-next:hover {
+        .carousel-prev-header:hover,
+        .carousel-next-header:hover {
             opacity: 1;
         }
         
         /* Pagination */
         
-        .carousel-pagination {
+        .carousel-pagination-header {
             list-style: none;
             position: absolute;
             bottom: 3%;
@@ -209,7 +209,7 @@
             z-index: 10;
         }
         
-        .carousel-bullet {
+        .carousel-bullet-header {
             display: inline-block;
             width: 8px;
             height: 8px;
@@ -222,13 +222,13 @@
             transition-duration: 0.3s;
         }
         
-        .carousel-bullet:hover {
+        .carousel-bullet-header:hover {
             -webkit-transform: scale(1.3);
             transform: scale(1.3);
         }
         
-        .carousel-bullet.active-bullet, 
-        .carousel-bullet.active-bullet:hover {
+        .carousel-bullet-header.active-bullet, 
+        .carousel-bullet-header.active-bullet:hover {
             opacity: 1;
             -webkit-transform: scale(1.3);
             transform: scale(1.3);

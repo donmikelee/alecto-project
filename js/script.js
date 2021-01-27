@@ -1,10 +1,10 @@
-const carousel = document.querySelector('.carousel');
-const container = carousel.querySelector('.carousel-container');
-const prevBtn = carousel.querySelector('.carousel-prev');
-const nextBtn = carousel.querySelector('.carousel-next');
-const pagination = carousel.querySelector('.carousel-pagination');
-const bullets = [].slice.call(carousel.querySelectorAll('.carousel-bullet'));
-const totalItems = container.querySelectorAll('.carousel-item').length;
+const carousel = document.querySelector('.carousel-header');
+const container = carousel.querySelector('.carousel-container-header');
+const prevBtn = carousel.querySelector('.carousel-prev-header');
+const nextBtn = carousel.querySelector('.carousel-next-header');
+const pagination = carousel.querySelector('.carousel-pagination-header');
+const bullets = [].slice.call(carousel.querySelectorAll('.carousel-bullet-header'));
+const totalItems = container.querySelectorAll('.carousel-item-header').length;
 const percent = (100 / totalItems);
 let currentIndex = 0;
 
