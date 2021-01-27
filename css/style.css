@@ -805,6 +805,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 80px;
 }
 
 .meet-our-team .employers div {
@@ -852,5 +853,44 @@
 
 .meet-our-team .employers div:hover h3 {
   opacity: 1;
+}
+
+.pricing {
+  min-height: 100vh;
+  width: 100%;
+  padding: 80px 200px 0 200px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing .sec-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pricing .sec-header h2 {
+  font-size: 48px;
+  font-weight: 300;
+  color: #61686d;
+}
+
+.pricing .sec-header h2::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #17DAA2;
+  margin-top: 20px;
+  width: 20px;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.pricing .sec-header p {
+  color: #9DA9B1;
 }
 /*# sourceMappingURL=style.css.map */

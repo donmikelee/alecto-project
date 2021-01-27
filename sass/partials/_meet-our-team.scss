@@ -38,6 +38,7 @@
         flex: 1;
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: $margin-basic * 2;
 
         div{
             flex-grow: 1;
