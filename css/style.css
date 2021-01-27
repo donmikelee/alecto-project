@@ -3,13 +3,19 @@
 .btn {
   width: 200px;
   height: 50px;
-  border: none;
+  border: 2px solid #17DAA2;
   border-radius: 25px;
   background: #17DAA2;
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 700;
+  transition: 0.3s ease;
   cursor: pointer;
+}
+
+.btn:hover {
+  background: #FFFFFF;
+  color: #17DAA2;
 }
 
 .header {
@@ -100,9 +106,12 @@
   transform: translate(-50%, -50%);
   width: 1000px;
   margin: 0 auto;
+  /* Carousel */
+  /* Next / Prev Buttons */
+  /* Pagination */
 }
 
-.carousel-item > div {
+.header-content .container .carousel-item > div {
   height: 400px;
   font-size: 1.5em;
   text-align: center;
@@ -110,27 +119,26 @@
   padding-top: 160px;
 }
 
-.carousel-item > div span {
+.header-content .container .carousel-item > div span {
   font-weight: 400;
 }
 
-.carousel-item > div h1 {
+.header-content .container .carousel-item > div h1 {
   font-weight: 100;
 }
 
-.carousel-item > div p {
+.header-content .container .carousel-item > div p {
   margin-top: 20px;
   font-size: 16px;
 }
 
-/* Carousel */
-.carousel {
+.header-content .container .carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-.carousel-container {
+.header-content .container .carousel-container {
   list-style: none;
   overflow: hidden;
   padding: 0;
@@ -139,15 +147,14 @@
   transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
 }
 
-.carousel-item {
+.header-content .container .carousel-item {
   position: relative;
   float: left;
   width: 20%;
 }
 
-/* Next / Prev Buttons */
-.carousel-prev,
-.carousel-next {
+.header-content .container .carousel-prev,
+.header-content .container .carousel-next {
   position: absolute;
   top: 50%;
   background-color: transparent;
@@ -165,39 +172,38 @@
   transition: opacity 0.3s ease;
 }
 
-.carousel-prev i,
-.carousel-next i {
+.header-content .container .carousel-prev i,
+.header-content .container .carousel-next i {
   position: absolute;
   z-index: 15;
 }
 
-.carousel-prev {
+.header-content .container .carousel-prev {
   left: 2%;
   padding-right: 3px;
 }
 
-.carousel-prev::before {
+.header-content .container .carousel-prev::before {
   content: '\f053';
   font-family: "FontAwesome";
 }
 
-.carousel-next {
+.header-content .container .carousel-next {
   right: 2%;
   padding-left: 3px;
 }
 
-.carousel-next::before {
+.header-content .container .carousel-next::before {
   content: '\f054';
   font-family: "FontAwesome";
 }
 
-.carousel-prev:hover,
-.carousel-next:hover {
+.header-content .container .carousel-prev:hover,
+.header-content .container .carousel-next:hover {
   opacity: 1;
 }
 
-/* Pagination */
-.carousel-pagination {
+.header-content .container .carousel-pagination {
   list-style: none;
   position: absolute;
   bottom: 3%;
@@ -210,7 +216,7 @@
   z-index: 10;
 }
 
-.carousel-bullet {
+.header-content .container .carousel-bullet {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -223,12 +229,12 @@
   transition-duration: 0.3s;
 }
 
-.carousel-bullet:hover {
+.header-content .container .carousel-bullet:hover {
   transform: scale(1.3);
 }
 
-.carousel-bullet.active-bullet,
-.carousel-bullet.active-bullet:hover {
+.header-content .container .carousel-bullet.active-bullet,
+.header-content .container .carousel-bullet.active-bullet:hover {
   opacity: 1;
   transform: scale(1.3);
   background-color: #fff;
@@ -440,6 +446,9 @@
   -o-object-fit: contain;
      object-fit: contain;
   position: relative;
+  /* Carousel */
+  /* Next / Prev Buttons */
+  /* Pagination */
 }
 
 .about-us-four::before {
@@ -452,5 +461,144 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.about-us-four .container-about-us {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.about-us-four .carousel-item-about-us > div {
+  height: 400px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  padding-top: 160px;
+}
+
+.about-us-four .carousel-item-about-us > div span {
+  font-weight: 400;
+}
+
+.about-us-four .carousel-item-about-us > div h1 {
+  font-weight: 100;
+}
+
+.about-us-four .carousel-item-about-us > div p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.about-us-four .carousel-about-us {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-us-four .carousel-container-about-us {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 500%;
+  transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.about-us-four .carousel-item-about-us {
+  position: relative;
+  float: left;
+  width: 20%;
+}
+
+.about-us-four .carousel-about-us-prev,
+.about-us-four .carousel-about-us-next {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  opacity: 0.7;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  transform: translate(0, -50%);
+  text-align: center;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.about-us-four .carousel-about-us-prev i,
+.about-us-four .carousel-about-us-next i {
+  position: absolute;
+  z-index: 15;
+}
+
+.about-us-four .carousel-about-us-prev {
+  left: 2%;
+  padding-right: 3px;
+}
+
+.about-us-four .carousel-about-us-prev::before {
+  content: '\f053';
+  font-family: "FontAwesome";
+}
+
+.about-us-four .carousel-about-us-next {
+  right: 2%;
+  padding-left: 3px;
+}
+
+.about-us-four .carousel-about-us-next::before {
+  content: '\f054';
+  font-family: "FontAwesome";
+}
+
+.about-us-four .carousel-about-us-prev:hover,
+.about-us-four .carousel-about-us-next:hover {
+  opacity: 1;
+}
+
+.about-us-four .carousel-pagination-about-us {
+  list-style: none;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.about-us-four .carousel-bullet-about-us {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  cursor: pointer;
+  margin: 0 7px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition-property: transform, opacity, background-color;
+  transition-duration: 0.3s;
+}
+
+.about-us-four .carousel-bullet-about-us:hover {
+  transform: scale(1.3);
+}
+
+.about-us-four .carousel-bullet-about-us.active-bullet,
+.about-us-four .carousel-bullet-about-us.active-bullet:hover {
+  opacity: 1;
+  transform: scale(1.3);
+  background-color: #fff;
+  cursor: default;
 }
 /*# sourceMappingURL=style.css.map */

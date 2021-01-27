@@ -1,6 +1,7 @@
 /* VARIABLES */
 
 $color-main: #17DAA2;
+$color-hover: #03d3eb;
 $color-black: #333;
 $color-gray: #f0f0f0;
 $color-white: #FFFFFF;
@@ -31,11 +32,16 @@ $font-size-logo: 48px;
 .btn{
     width: 200px;
     height: 50px;
-    border: none;
+    border: 2px solid $color-main;
     border-radius: 25px;
     background: $color-main;
     font-size: 16px;
     color: $color-white;
     font-weight: $bold;
+    transition: 0.3s ease;
     cursor: pointer;
+    &:hover{
+        background: $color-white;
+        color: $color-main;
+    }
 }
