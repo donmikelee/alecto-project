@@ -1,0 +1,33 @@
+footer{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: $margin-basic * 2;
+    color: $color-p;
+
+    > div{
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    .copyright{
+        
+        &::before{
+            content: '\f1f9';
+            font-family: 'FontAwesome';
+            color: black;
+            margin-right: $margin-basic / 2;
+        }
+    }
+
+    ul{
+        text-align: center;
+
+        li{
+            display: inline-block;
+            margin-right: $margin-basic;
+            cursor: pointer;
+        }
+    }
+}

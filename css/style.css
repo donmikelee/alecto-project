@@ -18,6 +18,27 @@
   color: #17DAA2;
 }
 
+.btn2 {
+  max-width: 220px;
+  min-height: 50px;
+  border: 2px solid #17DAA2;
+  background: #17DAA2;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  text-align: left;
+  padding-left: 10px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background: #FFFFFF;
+  color: #17DAA2;
+}
+
 .header {
   height: 100vh;
   width: 100%;
@@ -438,6 +459,7 @@
   width: 343px;
 }
 
+/* ANOTHER ABOUT-US SECTION */
 .about-us-four {
   min-height: 60vh;
   width: 100%;
@@ -856,7 +878,7 @@
 }
 
 .pricing {
-  min-height: 100vh;
+  min-height: 130vh;
   width: 100%;
   padding: 80px 200px 0 200px;
   margin: 0 auto;
@@ -864,7 +886,7 @@
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  background: #FFFFFF;
+  background: #f0f0f0;
   display: flex;
   flex-direction: column;
 }
@@ -892,5 +914,153 @@
 
 .pricing .sec-header p {
   color: #9DA9B1;
+}
+
+.pricing .price-keeper {
+  -ms-flex: 1;
+      flex: 1;
+  max-height: 500px;
+  background: #FFFFFF;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pricing .price-keeper .price {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 40px 0 0 40px;
+}
+
+.pricing .price-keeper .price .price-title h3 {
+  font-size: 48px;
+  font-weight: 300;
+  color: #17DAA2;
+}
+
+.pricing .price-keeper .price .price-title p {
+  color: #9DA9B1;
+  padding-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.pricing .price-keeper .price .price-title p::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #f0f0f0;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.pricing .price-keeper .price p:last-child {
+  line-height: 40px;
+  padding-left: 5px;
+}
+
+.pricing .buttons {
+  -ms-flex: 1;
+      flex: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+.pricing .buttons button {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.pricing .buttons button::after {
+  content: '\f07a';
+  font-family: 'FontAwesome';
+  margin-left: 60px;
+}
+
+.pre-footer {
+  min-height: 80vh;
+  width: 100%;
+  background: url(../images/pre-footer-bg/start-up.jpg) top right no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+}
+
+.pre-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.pre-footer .sec-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  text-align: center;
+}
+
+.pre-footer .sec-header span {
+  color: #17DAA2;
+}
+
+.pre-footer .sec-header h1 {
+  font-weight: 400;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.pre-footer .sec-header button {
+  margin-top: 80px;
+}
+
+footer {
+  min-height: 10vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-left: 80px;
+  color: #9DA9B1;
+}
+
+footer > div {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+footer .copyright::before {
+  content: '\f1f9';
+  font-family: 'FontAwesome';
+  color: black;
+  margin-right: 20px;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 40px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
