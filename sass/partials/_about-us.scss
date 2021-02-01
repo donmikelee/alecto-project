@@ -144,13 +144,14 @@
 
 .about-us-two,
 .about-us-three{
-    min-height: 60vh;
+    min-height: 50vh;
     padding: 0 $padding-side 0 $padding-side;
     display: flex;
 
     .sec-image{
         flex: 1;
         padding-top: 120px;
+        padding-bottom: 120px;
 
         img{
             height: 200px;
@@ -257,6 +258,8 @@
     
         h1{
             font-weight: $thin;
+            padding-left: 80px;
+            padding-right: 80px;
         }
     
         p{
@@ -294,6 +297,7 @@
 .carousel-about-us-next {
     position: absolute;
     top: 50%;
+    margin: $margin-basic 0;
     background-color: transparent;
     opacity: 0.7;
     border-radius: 50%;
@@ -384,3 +388,14 @@
 
 }
 
+@media(max-width: 1250px){
+    .about-us{
+        padding: 80px ($padding-side /2) 0 ($padding-side /2);
+    }
+
+    .about-us-two,
+    .about-us-three{
+        padding: 0 ($padding-side /2) 0 ($padding-side /2);
+    }
+  
+}

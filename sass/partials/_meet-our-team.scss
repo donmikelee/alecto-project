@@ -88,3 +88,36 @@
         }
     }
 }
+
+
+@media(max-width: 1440px){
+    .meet-our-team{
+
+        .employers{
+
+            div{
+                flex-grow: 2; 
+                flex-basis: 50%;
+                max-width: 420px;
+                max-height: 550px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+    .meet-our-team{
+
+        .employers{
+            
+            div{
+                flex-grow: 2; 
+                flex-basis: 50%;
+                max-width: 220px;
+                max-height: 350px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

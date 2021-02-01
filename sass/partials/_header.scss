@@ -30,6 +30,8 @@
             flex: 3;
             text-align: center;
             position: relative;
+            display: block;
+
             ul{
                 position: absolute;
                 right: 0;
@@ -59,6 +61,64 @@
                     color: white;
                 }
               }
+        }
+
+        .nav-mobile-menu{
+            min-height: 50px;
+            min-width: 50px;
+            display: none;
+            text-align: right;
+
+            button{
+                background: none;
+                border: none;
+
+                &::before{
+                    content: '\f0c9';
+                    font-family: "FontAwesome";
+                    color: $color-white;
+                    font-size: 26px;
+                }
+
+                &::after{
+                    content: '\f00d';
+                    font-family: "FontAwesome";
+                    color: $color-white;
+                    font-size: 30px;
+                    display: none;
+                }
+            }
+
+        }
+
+        .nav-words-mobile{
+            height: 100%;
+            width: 300px;
+            background: $color-logo-bg;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 200;
+            display: none;
+
+            .logo{
+                padding-top: 40px;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            ul{
+                padding: 0;
+                text-decoration: none;
+                list-style-type: none;
+                margin: $margin-basic * 2 auto;
+                text-align: center;
+
+                li{
+                    text-transform: uppercase;
+                    margin-top: $margin-basic * 2;
+                }
+            }
         }
     }
 }
@@ -237,5 +297,61 @@
         }
     }
 }
+
+
+/* MOBILE VERSION */
+
+@media(max-width: 1250px){
+    .header{
+        padding-left: $padding-side / 2;
+        padding-right: $padding-side / 2;
+    
+        .search-log{
+            max-width: 70px;
+            padding-left: 30px;
+            input[type=text] {
+                max-width: 120px;
+            }
+        }
+
+        .nav{
+            .nav-words{
+                ul{
+                    li{
+                        margin-left: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1138px){
+    .carousel-prev-header,
+    .carousel-next-header{
+        margin: 0 $margin-basic * 2;
+    }
+}
+
+@media(max-width: 992px){
+    .header{
+        .nav{
+            .nav-words{
+                display: none;
+            }
+
+            .search-log{
+                display: none;
+            }
+
+            .nav-mobile-menu{
+                display: block;
+            }
+        }
+
+    }
+}
+
+
 
 
