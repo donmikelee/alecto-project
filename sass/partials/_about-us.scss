@@ -1,7 +1,6 @@
 .about-us{
     min-height: 80vh;
     width: 100%;
-    padding: 80px $padding-side 0 $padding-side;
     margin: 0 auto;
     
     .btn-sec{
@@ -144,13 +143,13 @@
 
 .about-us-two,
 .about-us-three{
-    min-height: 50vh;
+    min-height: 60vh;
     padding: 0 $padding-side 0 $padding-side;
     display: flex;
 
     .sec-image{
         flex: 1;
-        padding-top: 120px;
+        padding-top: 60px;
         padding-bottom: 120px;
 
         img{
@@ -161,7 +160,7 @@
 
     article{
         flex: 1;
-        padding-top: 80px;
+        padding-top: 30px;
 
         h2{
             text-align: left;
@@ -388,14 +387,3 @@
 
 }
 
-@media(max-width: 1250px){
-    .about-us{
-        padding: 80px ($padding-side /2) 0 ($padding-side /2);
-    }
-
-    .about-us-two,
-    .about-us-three{
-        padding: 0 ($padding-side /2) 0 ($padding-side /2);
-    }
-  
-}

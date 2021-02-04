@@ -62,6 +62,8 @@ $font-size-logo: 48px;
     padding-left: 10px;
     letter-spacing: 3px;
     cursor: pointer;
+    text-align: center;
+    display: block;
 
     &:hover{
         background: $color-white;
