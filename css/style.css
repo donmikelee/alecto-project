@@ -267,7 +267,7 @@
     padding: 20px 25px 0 25px;
   }
   .wrapper main section {
-    padding: 80px 20px 0 20px;
+    padding: 40px 20px 40px 20px;
   }
 }
 
@@ -299,7 +299,7 @@
 }
 
 .about-us .sec-header h2::after {
-  content: '';
+  content: "";
   display: block;
   border-bottom: 2px solid #17DAA2;
   margin-top: 20px;
@@ -350,7 +350,7 @@
 }
 
 .about-us .first .logo::before {
-  content: '\f135';
+  content: "\f135";
   font-family: "FontAwesome";
   position: absolute;
   top: 50%;
@@ -365,7 +365,7 @@
 }
 
 .about-us .second .logo::before {
-  content: '\f5d2';
+  content: "\f5d2";
   font-family: "FontAwesome";
   position: absolute;
   top: 50%;
@@ -376,7 +376,7 @@
 }
 
 .about-us .third .logo::before {
-  content: '\f201';
+  content: "\f201";
   font-family: "FontAwesome";
   position: absolute;
   top: 50%;
@@ -387,7 +387,7 @@
 }
 
 .about-us .fourth .logo::before {
-  content: '\f19d';
+  content: "\f19d";
   font-family: "FontAwesome";
   position: absolute;
   top: 50%;
@@ -408,16 +408,18 @@
 
 .about-us-two .sec-image,
 .about-us-three .sec-image {
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex: 1;
       flex: 1;
-  padding-top: 60px;
-  padding-bottom: 120px;
 }
 
 .about-us-two .sec-image img,
 .about-us-three .sec-image img {
-  height: 200px;
-  width: 260px;
+  margin: 0;
+  display: block;
+  height: 416px;
+  width: 520px;
 }
 
 .about-us-two article,
@@ -450,8 +452,14 @@
   background: #FFFFFF;
 }
 
+.about-us-three .sec-image {
+  padding-top: 60px;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
 .about-us-three .sec-image img {
-  float: right;
+  margin: 0;
   height: 200px;
   width: 343px;
 }
@@ -462,6 +470,7 @@
   width: 100%;
   background: url(../images/carousele-img/office.jpg) top right no-repeat;
   background-size: cover;
+  background-attachment: none;
   -o-object-fit: contain;
      object-fit: contain;
   position: relative;
@@ -471,7 +480,7 @@
 }
 
 .about-us-four::before {
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
@@ -586,7 +595,7 @@
 }
 
 .about-us-four .carousel-about-us-prev::before {
-  content: '\f053';
+  content: "\f053";
   font-family: "FontAwesome";
 }
 
@@ -596,7 +605,7 @@
 }
 
 .about-us-four .carousel-about-us-next::before {
-  content: '\f054';
+  content: "\f054";
   font-family: "FontAwesome";
 }
 
@@ -641,6 +650,89 @@
   transform: scale(1.3);
   background-color: #fff;
   cursor: default;
+}
+
+@media (max-width: 425px) {
+  .about-us .sec-header {
+    margin-bottom: 40px;
+  }
+  .about-us .point {
+    height: 80%;
+    width: 300px;
+    padding: 0 20px;
+  }
+  .about-us .point .logo {
+    width: 100px;
+    height: 100px;
+  }
+  .about-us .point .logo::before {
+    font-size: 36px;
+  }
+  .about-us-two,
+  .about-us-three {
+    min-height: 60vh;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-us-two .sec-image,
+  .about-us-three .sec-image {
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .about-us-two .sec-image img,
+  .about-us-three .sec-image img {
+    margin: auto;
+    height: 208px;
+    width: 260px;
+  }
+  .about-us-two article,
+  .about-us-three article {
+    -ms-flex: 1;
+        flex: 1;
+    padding-top: 0;
+    text-align: center;
+  }
+  .about-us-two article h2,
+  .about-us-three article h2 {
+    text-align: center;
+  }
+  .about-us-two article p,
+  .about-us-three article p {
+    text-align: center;
+  }
+  .about-us-two {
+    background: #f0f0f0;
+  }
+  .about-us-two article {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .about-us-two .sec-image {
+    margin-top: 40px;
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .about-us-three {
+    background: #FFFFFF;
+  }
+  .about-us-three .sec-image {
+    padding-top: 60px;
+  }
+  .about-us-three .sec-image img {
+    margin: auto;
+    height: 150px;
+    width: 257px;
+  }
+  .about-us-four {
+    min-height: 100vh;
+    width: 100%;
+    background: url(../images/carousele-img/office.jpg) top right no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -o-object-fit: contain;
+       object-fit: contain;
+    position: relative;
+  }
 }
 
 .our-services {
@@ -723,6 +815,11 @@
   padding-right: 20px;
 }
 
+.our-services article .point .sec-text .logo {
+  display: none;
+  margin: 0;
+}
+
 .our-services article .point h3 {
   font-size: 48px;
   font-weight: 300;
@@ -790,9 +887,54 @@
 }
 
 @media (max-width: 425px) {
-  .our-services article .point {
-    -ms-flex-direction: column;
-        flex-direction: column;
+  .our-services .sec-header {
+    margin-bottom: 40px;
+  }
+  .our-services .sec-header h2 {
+    font-size: 48px;
+    font-weight: 300;
+    color: #61686d;
+  }
+  .our-services .sec-header h2::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #17DAA2;
+    margin-top: 20px;
+    width: 20px;
+    text-align: center;
+    margin: 40px auto;
+  }
+  .our-services .sec-header p {
+    color: #9DA9B1;
+  }
+  .our-services article {
+    margin-top: 80px;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .our-services article .point .logo {
+    display: none;
+  }
+  .our-services article .point .sec-text {
+    margin-left: 0;
+    padding-right: 0px;
+    text-align: center;
+  }
+  .our-services article .point .sec-text .logo {
+    display: inline-block;
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+    max-height: 50px;
+    max-width: 50px;
+  }
+  .our-services article .point h3 {
+    font-size: 32px;
+    text-align: center;
   }
 }
 
@@ -1093,6 +1235,18 @@
   }
 }
 
+@media (max-width: 575px) {
+  .pricing .price-keeper .price {
+    text-align: center;
+  }
+  .pricing .price-keeper .price .price-title h3 {
+    text-align: center;
+  }
+  .pricing .price-keeper .price .price-title p {
+    text-align: center;
+  }
+}
+
 .pre-footer {
   min-height: 90vh;
   width: 100%;
@@ -1164,15 +1318,11 @@ footer .copyright::before {
   margin-right: 20px;
 }
 
-footer ul {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-footer ul li {
-  display: inline-block;
-  margin-right: 40px;
-  cursor: pointer;
+@media (max-width: 768px) {
+  footer {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 /*! Flickity v2.2.2

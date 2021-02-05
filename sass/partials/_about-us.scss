@@ -1,28 +1,28 @@
-.about-us{
+.about-us {
     min-height: 80vh;
     width: 100%;
     margin: 0 auto;
-    
-    .btn-sec{
+
+    .btn-sec {
         width: 100%;
         text-align: center;
-        margin: 2 * $margin-basic 0 ;
+        margin: 2 * $margin-basic 0;
 
-        button{
+        button {
             display: inline-block;
         }
     }
 
-    .sec-header{
+    .sec-header {
         text-align: center;
         margin-bottom: 2 * $margin-basic;
 
-        h2{
+        h2 {
             font-size: $font-size-h2;
             font-weight: $light;
             color: $color-h1;
-            &::after{
-                content: '';
+            &::after {
+                content: "";
                 display: block;
                 border-bottom: 2px solid $color-main;
                 margin-top: $margin-basic / 2;
@@ -32,29 +32,29 @@
             }
         }
 
-        p{
+        p {
             color: $color-p;
         }
     }
 
-    article{
+    article {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
-    
-    .point{
+
+    .point {
         height: 80%;
         width: 300px;
         padding: 0 20px;
-        .logo{
+        .logo {
             border-radius: 50%;
             width: 160px;
             height: 160px;
             background: $color-logo-bg;
-            margin: $margin-basic auto; 
+            margin: $margin-basic auto;
             position: relative;
         }
 
@@ -63,18 +63,17 @@
             font-weight: $regular;
         }
 
-        p{
+        p {
             margin-top: $margin-basic;
             text-align: center;
             color: $color-p;
         }
     }
 
-    .first{
-
-        .logo{
-            &::before{
-                content: '\f135';
+    .first {
+        .logo {
+            &::before {
+                content: "\f135";
                 font-family: "FontAwesome";
                 position: absolute;
                 top: 50%;
@@ -86,14 +85,12 @@
         }
     }
 
-    .second{
-
-        .logo{
-
+    .second {
+        .logo {
             background: $color-main;
 
-            &::before{
-                content: '\f5d2';
+            &::before {
+                content: "\f5d2";
                 font-family: "FontAwesome";
                 position: absolute;
                 top: 50%;
@@ -105,11 +102,10 @@
         }
     }
 
-    .third{
-
-        .logo{
-            &::before{
-                content: '\f201';
+    .third {
+        .logo {
+            &::before {
+                content: "\f201";
                 font-family: "FontAwesome";
                 position: absolute;
                 top: 50%;
@@ -121,11 +117,10 @@
         }
     }
 
-    .fourth{
-
-        .logo{
-            &::before{
-                content: '\f19d';
+    .fourth {
+        .logo {
+            &::before {
+                content: "\f19d";
                 font-family: "FontAwesome";
                 position: absolute;
                 top: 50%;
@@ -136,33 +131,33 @@
             }
         }
     }
-
 }
 
 /* ANOTHER ABOUT-US SECTION */
 
 .about-us-two,
-.about-us-three{
+.about-us-three {
     min-height: 60vh;
     padding: 0 $padding-side 0 $padding-side;
     display: flex;
 
-    .sec-image{
+    .sec-image {
+        display: flex;
         flex: 1;
-        padding-top: 60px;
-        padding-bottom: 120px;
 
-        img{
-            height: 200px;
-            width: 260px;
+        img {
+            margin: 0;
+            display: block;
+            height: 416px;
+            width: 520px;
         }
     }
 
-    article{
+    article {
         flex: 1;
         padding-top: 30px;
 
-        h2{
+        h2 {
             text-align: left;
             margin-bottom: $margin-basic;
             font-size: $font-size-h2;
@@ -170,25 +165,28 @@
             color: $color-h1;
         }
 
-        p{
+        p {
             margin-bottom: 2 * $margin-basic;
             color: $color-p;
         }
     }
 }
 
-
-.about-us-two{
+.about-us-two {
     background: $color-gray;
+
 }
 
-.about-us-three{
+.about-us-three {
     background: $color-white;
 
-    .sec-image{
 
-        img{
-            float: right;
+    .sec-image {
+        padding-top: 60px;
+        justify-content: flex-end;
+
+        img {
+            margin: 0;
             height: 200px;
             width: 343px;
         }
@@ -197,16 +195,17 @@
 
 /* ANOTHER ABOUT-US SECTION */
 
-.about-us-four{
+.about-us-four {
     min-height: 60vh;
     width: 100%;
     background: $carousel-photo top right no-repeat;
     background-size: cover;
+    background-attachment: none;
     object-fit: contain;
     position: relative;
 
-    &::before{
-        content: '';
+    &::before {
+        content: "";
         display: block;
         height: 100%;
         width: 100%;
@@ -218,7 +217,7 @@
     }
 
     /* Carousel */
-    .container-about-us{
+    .container-about-us {
         position: absolute;
         top: 40%;
         left: 50%;
@@ -233,7 +232,7 @@
         color: #fff;
         padding-top: $padding-side/2;
 
-        .item-photo{
+        .item-photo {
             height: 75px;
             width: 75px;
             background-color: $color-gray;
@@ -245,145 +244,231 @@
             background-size: cover;
             object-fit: cover;
 
-            img{
+            img {
                 height: 94px;
                 width: 75px;
             }
         }
-    
-        span{
+
+        span {
             color: $color-main;
         }
-    
-        h1{
+
+        h1 {
             font-weight: $thin;
             padding-left: 80px;
             padding-right: 80px;
         }
-    
-        p{
+
+        p {
             margin-top: 20px;
             font-size: $font-size-p;
             color: $color-p;
         }
     }
 
+    .carousel-about-us {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
 
-.carousel-about-us {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
+    .carousel-container-about-us {
+        list-style: none;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        width: 500%;
+        transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    }
 
-.carousel-container-about-us {
-    list-style: none;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    width: 500%;
-    transition: transform 0.3s cubic-bezier(.694, .0482, .335, 1);
-}
+    .carousel-item-about-us {
+        position: relative;
+        float: left;
+        width: 20%;
+    }
 
-.carousel-item-about-us {
-    position: relative;
-    float: left;
-    width: 20%;
-}
+    /* Next / Prev Buttons */
 
-/* Next / Prev Buttons */
-
-.carousel-about-us-prev,
-.carousel-about-us-next {
-    position: absolute;
-    top: 50%;
-    margin: $margin-basic 0;
-    background-color: transparent;
-    opacity: 0.7;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 32px;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    z-index: 10;
-    transition: opacity 0.3s ease;
-    
-    i{
+    .carousel-about-us-prev,
+    .carousel-about-us-next {
         position: absolute;
-        z-index: 15;
+        top: 50%;
+        margin: $margin-basic 0;
+        background-color: transparent;
+        opacity: 0.7;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-align: center;
+        z-index: 10;
+        transition: opacity 0.3s ease;
+
+        i {
+            position: absolute;
+            z-index: 15;
+        }
+    }
+
+    .carousel-about-us-prev {
+        left: 2%;
+        padding-right: 3px;
+    }
+
+    .carousel-about-us-prev::before {
+        content: "\f053";
+        font-family: "FontAwesome";
+    }
+
+    .carousel-about-us-next {
+        right: 2%;
+        padding-left: 3px;
+    }
+
+    .carousel-about-us-next::before {
+        content: "\f054";
+        font-family: "FontAwesome";
+    }
+
+    .carousel-about-us-prev:hover,
+    .carousel-about-us-next:hover {
+        opacity: 1;
+    }
+
+    /* Pagination */
+
+    .carousel-pagination-about-us {
+        list-style: none;
+        position: absolute;
+        bottom: 3%;
+        left: 0;
+        right: 0;
+        width: 50%;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .carousel-bullet-about-us {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #000;
+        cursor: pointer;
+        margin: 0 7px;
+        border-radius: 50%;
+        opacity: 0.5;
+        transition-property: transform, opacity, background-color;
+        transition-duration: 0.3s;
+    }
+
+    .carousel-bullet-about-us:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    .carousel-bullet-about-us.active-bullet,
+    .carousel-bullet-about-us.active-bullet:hover {
+        opacity: 1;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        background-color: #fff;
+        cursor: default;
     }
 }
 
-.carousel-about-us-prev {
-    left: 2%;
-    padding-right: 3px;
+@media (max-width: 425px) {
+    .about-us {
+        .sec-header {
+            margin-bottom: $margin-basic;
+        }
+
+        .point {
+            height: 80%;
+            width: 300px;
+            padding: 0 20px;
+            .logo {
+                width: 100px;
+                height: 100px;
+
+                &::before {
+                    font-size: $font-size-logo - 12px;
+                }
+            }
+        }
+    }
+
+    .about-us-two,
+    .about-us-three {
+        min-height: 60vh;
+        display: flex;
+
+        .sec-image {
+            flex: 1;
+
+            img {
+                margin: auto;
+                height: 208px;
+                width: 260px;
+            }
+        }
+
+        article {
+            flex: 1;
+            padding-top: 0;
+            text-align: center;
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .about-us-two {
+        background: $color-gray;
+
+        article{
+            order: 1;
+        }
+
+        .sec-image{
+            margin-top: $margin-basic;
+            order: 2;
+        }
+    }
+
+    .about-us-three {
+        background: $color-white;
+
+        .sec-image {
+            padding-top: 60px;
+
+            img {
+                margin: auto;
+                height: 150px;
+                width: 257px;
+            }
+        }
+    }
+
+    .about-us-four{
+        min-height: 100vh;
+        width: 100%;
+        background: $carousel-photo top right no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        object-fit: contain;
+        position: relative;
+    }
 }
-
-.carousel-about-us-prev::before {
-    content: '\f053';
-    font-family: "FontAwesome";
-}
-
-.carousel-about-us-next {
-    right: 2%;
-    padding-left: 3px;
-}
-
-.carousel-about-us-next::before {
-    content: '\f054';
-    font-family: "FontAwesome";
-}
-
-.carousel-about-us-prev:hover,
-.carousel-about-us-next:hover {
-    opacity: 1;
-}
-
-/* Pagination */
-
-.carousel-pagination-about-us {
-    list-style: none;
-    position: absolute;
-    bottom: 3%;
-    left: 0;
-    right: 0;
-    width: 50%;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    z-index: 10;
-}
-
-.carousel-bullet-about-us {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #000;
-    cursor: pointer;
-    margin: 0 7px;
-    border-radius: 50%;
-    opacity: 0.5;
-    transition-property: transform, opacity, background-color;
-    transition-duration: 0.3s;
-}
-
-.carousel-bullet-about-us:hover {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-}
-
-.carousel-bullet-about-us.active-bullet, 
-.carousel-bullet-about-us.active-bullet:hover {
-    opacity: 1;
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-    background-color: #fff;
-    cursor: default;
-}
-
-}
-

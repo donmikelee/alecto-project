@@ -194,3 +194,28 @@
         }
     }
 }
+
+@media(max-width: 575px){
+    .pricing{.price-keeper{
+
+            
+            .price{
+                text-align: center;
+
+                .price-title{
+                    
+                    h3{
+                        text-align: center;
+                    }
+    
+                    p{
+                        text-align: center;
+                    }
+                }
+    
+            }
+        }
+    
+    }
+    
+}
