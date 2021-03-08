@@ -32,11 +32,12 @@
             <div class="search-log">
               <input type="text" placeholder="&#xF002;" style="font-family:Arial, FontAwesome">
             </div>
-            <div class="nav-mobile-menu">
-              <button type="button"> </button>
+            <div class="nav-mobile-button">
+              <button class="hamburger" type="button">
+              </button>
             </div>
             <aside class="mobile-menu">
-              <div class="nav-words-mobile">
+              <div id="mobile-menu">
                 <div class="logo">Alecto<span>.</span></div>
                 <ul>
                   <li>home</li>
@@ -150,56 +151,26 @@
       <section class="about-us-four">
         <div class="container">
           <div class="row">
-            <div class="container-about-us">
-              <div class="carousel-about-us">
-                <div class="carousel-about-us-prev"></div>
-                <div class="carousel-about-us-next"></div>
-                <ul class="carousel-pagination-about-us">
-                  <li class="carousel-bullet-about-us"></li>
-                  <li class="carousel-bullet-about-us"></li>
-                  <li class="carousel-bullet-about-us"></li>
-                  <li class="carousel-bullet-about-us"></li>
-                  <li class="carousel-bullet-about-us"></li>
-                </ul>
-                <ul class="carousel-container-about-us">
-                  <li class="carousel-item-about-us">
-                    <div class="item-1">
-                      <div class="item-photo">
-                        <!-- <img src="images/employers/menago.jpg" alt="employer"> -->
-                      </div>
-                      <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
-                      <p>Adam Czajkowski, CEO&Founder at symu.co</p>
-                    </div>
-                  </li>
-                  <li class="carousel-item-about-us">
-                    <div class="item-2">
-                      <div class="item-photo"></div>
-                      <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
-                      <p>This the second page of slider</p>
-                    </div>
-                  </li>
-                  <li class="carousel-item-about-us">
-                    <div class="item-3">
-                      <div class="item-photo"></div>
-                      <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
-                      <p>This the third page of slider</p>
-                    </div>
-                  </li>
-                  <li class="carousel-item-about-us">
-                    <div class="item-4">
-                      <div class="item-photo"></div>
-                      <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
-                      <p>This the fourth page of slider</p>
-                    </div>
-                  </li>
-                  <li class="carousel-item-about-us">
-                    <div class="item-5">
-                      <div class="item-photo"></div>
-                      <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
-                      <p>This the fifth page of slider</p>
-                    </div>
-                  </li>
-                </ul>
+            <div class="main-carousel" data-flickity='{ "autoPlay": true}'>
+              <div class="carousel-cell">
+                <div class="item-photo"></div>
+                <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
+                <p>This is first page of slider</p>
+              </div>
+              <div class="carousel-cell">
+                <div class="item-photo"></div>
+                <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
+                <p>This is second page of slider</p>
+              </div>
+              <div class="carousel-cell">
+                <div class="item-photo"></div>
+                <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
+                <p>This is third page of slider</p>
+              </div>
+              <div class="carousel-cell">
+                <div class="item-photo"></div>
+                <h1><span>Alecto</span> lorem ipsum dolor sit amet, consectetus adiscing elit</h1>
+                <p>This is four page of slider</p>
               </div>
             </div>
           </div>
@@ -366,6 +337,7 @@
   <script src="js/flickity-docs.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/aside-menu.js"></script>
   <script src="https://kit.fontawesome.com/58ec81cb28.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -376,7 +348,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
     integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
     crossorigin="anonymous"></script>
-  <script src="/path/to/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

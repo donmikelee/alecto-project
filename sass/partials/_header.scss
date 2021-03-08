@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-
-.header{
+.header {
     height: 100vh;
     width: 100%;
     padding: 40px ($padding-side) 0 ($padding-side);
@@ -11,31 +10,31 @@
     object-fit: contain;
     color: $color-white;
 
-    .nav{
+    .nav {
         display: flex;
         width: 100%;
 
-        .logo{
+        .logo {
             font-size: $font-size-h1;
             flex: 1;
 
-            span{
+            span {
                 font-size: $font-size-h1;
                 color: $color-main;
             }
         }
-        .nav-words{
+        .nav-words {
             flex: 3;
             text-align: center;
             position: relative;
             display: block;
 
-            ul{
+            ul {
                 position: absolute;
                 right: 0;
                 text-align: center;
 
-                li{
+                li {
                     display: inline-block;
                     margin-left: 60px;
                     text-transform: uppercase;
@@ -45,53 +44,72 @@
                 }
             }
         }
-        .search-log{
+        .search-log {
             flex: 1;
             max-width: 100px;
             padding-left: 60px;
-            input[type=text] {
+            input[type="text"] {
                 background-color: transparent;
                 border: none;
                 color: $color-white;
-                font-family: 'Lato', sans-serif;
+                font-family: "Lato", sans-serif;
 
-                &::placeholder{
+                &::placeholder {
                     color: white;
                 }
-              }
+            }
         }
 
-        .nav-mobile-menu{
-            min-height: 50px;
-            min-width: 50px;
+        .nav-mobile-button {
+            max-height: 50px;
+            max-width: 50px;
             display: none;
             text-align: right;
 
-            button{
+            .hamburger {
+                transition: 0.2s transform linear;
                 background: none;
                 border: none;
+                width: 30px;
+                height: 25px;
+                border-top: 3px solid #fff;
+                position: relative;
 
-                &::before{
-                    content: '\f0c9';
-                    font-family: "FontAwesome";
-                    color: $color-white;
-                    font-size: 26px;
+                &::before, {
+                    content: "";
+                    transform: translateY(10px);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    border-top: 3px solid #fff;
+                }
+                &::after {
+                    content: "";
+                    transform: translateY(22px);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    border-top: 3px solid #fff;
+                    transition: 0.2s transform linear;
                 }
 
-                &::after{
-                    content: '\f00d';
-                    font-family: "FontAwesome";
-                    color: $color-white;
-                    font-size: 30px;
-                    display: none;
+                &:focus{
+                    transform: rotate(45deg) translate(5px);
+                    border: none;
+                    outline: none;
+                }
+
+                &:focus::after{
+                    transform: rotate(-90deg) translate(-10px);
                 }
             }
-
         }
 
-        .nav-words-mobile{
+        #mobile-menu {
             height: 100%;
-            width: 300px;
+            width: 250px;
             background: $color-logo-bg;
             position: absolute;
             top: 0;
@@ -99,20 +117,24 @@
             z-index: 200;
             display: none;
 
-            .logo{
+            & .show {
+                display: block;
+            }
+
+            .logo {
                 padding-top: 40px;
                 text-align: center;
                 margin: 0 auto;
             }
 
-            ul{
+            ul {
                 padding: 0;
                 text-decoration: none;
                 list-style-type: none;
                 margin: $margin-basic * 2 auto;
                 text-align: center;
 
-                li{
+                li {
                     text-transform: uppercase;
                     margin-top: $margin-basic * 2;
                 }
@@ -121,32 +143,29 @@
     }
 }
 
-.header-content{
+.header-content {
     width: 100%;
     height: 90%;
     position: relative;
     padding-top: $margin-basic * 4;
 }
 
+@media (max-width: 1250px) {
+    .header {
+        padding: 40px ($padding-side / 2) 0 ($padding-side / 2);
 
-
-
-@media(max-width: 1250px){
-    .header{
-        padding: 40px ($padding-side /2) 0 ($padding-side /2);
-    
-        .search-log{
+        .search-log {
             max-width: 70px;
             padding-left: 30px;
-            input[type=text] {
+            input[type="text"] {
                 max-width: 120px;
             }
         }
 
-        .nav{
-            .nav-words{
-                ul{
-                    li{
+        .nav {
+            .nav-words {
+                ul {
+                    li {
                         margin-left: 45px;
                     }
                 }
@@ -155,38 +174,39 @@
     }
 }
 
-@media(max-width: 1138px){
-    .header-content{
-        padding-top: $margin-basic * 2;
+@media (min-width: 1500px) {
+    .header-content {
+        padding-top: $padding-side;
     }
 }
 
-@media(max-width: 992px){
-    .header{
-        .nav{
-            .nav-words{
+@media (max-width: 1499px) {
+    .header-content {
+        padding-top: ($padding-side / 2);
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        .nav {
+            .nav-words {
                 display: none;
             }
 
-            .search-log{
+            .search-log {
                 display: none;
             }
 
-            .nav-mobile-menu{
+            .nav-mobile-button {
                 display: block;
+                
             }
         }
-
     }
 }
 
-@media(max-width: 425px){
-    .header-content{
+@media (max-width: 425px) {
+    .header-content {
         padding-top: $margin-basic;
     }
 }
-
-
-
-
-
