@@ -57,6 +57,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .header .nav .logo {
@@ -120,71 +121,78 @@
   max-width: 50px;
   display: none;
   text-align: right;
-}
-
-.header .nav .nav-mobile-button .hamburger {
-  transition: 0.2s transform linear;
-  background: none;
-  border: none;
-  width: 30px;
-  height: 25px;
-  border-top: 3px solid #fff;
   position: relative;
 }
 
-.header .nav .nav-mobile-button .hamburger::before {
+.header .nav .nav-mobile-button .toggle-mnu {
+  position: absolute;
+  top: 14px;
+  right: 5px;
+  width: 28px;
+  height: 28px;
+  z-index: 1000;
+}
+
+.header .nav .nav-mobile-button .toggle-mnu span:after, .header .nav .nav-mobile-button .toggle-mnu span:before {
   content: "";
-  transform: translateY(10px);
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 3px solid #fff;
+  right: 0;
+  top: 9px;
 }
 
-.header .nav .nav-mobile-button .hamburger::after {
-  content: "";
-  transform: translateY(22px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 3px solid #fff;
-  transition: 0.2s transform linear;
+.header .nav .nav-mobile-button .toggle-mnu span:after {
+  top: 18px;
 }
 
-.header .nav .nav-mobile-button .hamburger:focus {
-  transform: rotate(45deg) translate(5px);
-  border: none;
-  outline: none;
-}
-
-.header .nav .nav-mobile-button .hamburger:focus::after {
-  transform: rotate(-90deg) translate(-10px);
-}
-
-.header .nav #mobile-menu {
-  height: 100%;
-  width: 250px;
-  background: #d6d7d8;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 200;
-  display: none;
-}
-
-.header .nav #mobile-menu .show {
+.header .nav .nav-mobile-button .toggle-mnu span {
+  position: relative;
   display: block;
 }
 
-.header .nav #mobile-menu .logo {
+.header .nav .nav-mobile-button .toggle-mnu span, .header .nav .nav-mobile-button .toggle-mnu span:after, .header .nav .nav-mobile-button .toggle-mnu span:before {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.header .nav .nav-mobile-button .toggle-mnu.on span {
+  background-color: transparent;
+}
+
+.header .nav .nav-mobile-button .toggle-mnu.on span:before {
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+
+.header .nav .nav-mobile-button .toggle-mnu.on span:after {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+.header .nav aside .mobile-menu {
+  height: 100%;
+  width: 300px;
+  background: #d6d7d8;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 100;
+  transition: all 0.2s ease-in;
+}
+
+.header .nav aside .mobile-menu.show {
+  left: 0;
+}
+
+.header .nav aside .mobile-menu .logo {
   padding-top: 40px;
   text-align: center;
   margin: 0 auto;
 }
 
-.header .nav #mobile-menu ul {
+.header .nav aside .mobile-menu ul {
   padding: 0;
   text-decoration: none;
   list-style-type: none;
@@ -192,9 +200,9 @@
   text-align: center;
 }
 
-.header .nav #mobile-menu ul li {
+.header .nav aside .mobile-menu ul li {
   text-transform: uppercase;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .header-content {
@@ -247,6 +255,10 @@
 @media (max-width: 425px) {
   .header-content {
     padding-top: 40px;
+  }
+  .header .nav aside .mobile-menu {
+    left: -500px;
+    width: 100%;
   }
 }
 
@@ -558,6 +570,12 @@
   color: #9DA9B1;
 }
 
+@media (max-width: 992px) {
+  .about-us-four {
+    min-height: 100vh;
+  }
+}
+
 @media (max-width: 425px) {
   .about-us .sec-header {
     margin-bottom: 40px;
@@ -566,6 +584,10 @@
     height: 80%;
     width: 300px;
     padding: 0 20px;
+  }
+  .about-us .point p {
+    margin-top: 20px;
+    margin-bottom: 60px;
   }
   .about-us .point .logo {
     width: 100px;
@@ -628,16 +650,6 @@
     margin: auto;
     height: 150px;
     width: 257px;
-  }
-  .about-us-four {
-    min-height: 100vh;
-    width: 100%;
-    background: url(../images/carousele-img/office.jpg) top right no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    -o-object-fit: contain;
-       object-fit: contain;
-    position: relative;
   }
   .about-us-four h1 {
     padding-left: 20px;

@@ -13,6 +13,7 @@
     .nav {
         display: flex;
         width: 100%;
+        position: relative;
 
         .logo {
             font-size: $font-size-h1;
@@ -65,78 +66,89 @@
             max-width: 50px;
             display: none;
             text-align: right;
+            position: relative;
 
-            .hamburger {
-                transition: 0.2s transform linear;
-                background: none;
-                border: none;
-                width: 30px;
-                height: 25px;
-                border-top: 3px solid #fff;
-                position: relative;
+            .toggle-mnu{
+                position: absolute;
+                top: 14px;
+                right: 5px;
+                width: 28px;
+                height: 28px;
+                z-index: 1000;
 
-                &::before, {
+                span:after, span:before{
                     content: "";
-                    transform: translateY(10px);
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    border-top: 3px solid #fff;
+                    right: 0;
+                    top: 9px;
                 }
-                &::after {
-                    content: "";
-                    transform: translateY(22px);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    border-top: 3px solid #fff;
-                    transition: 0.2s transform linear;
+   
+                span:after{
+                    top: 18px;
                 }
 
-                &:focus{
-                    transform: rotate(45deg) translate(5px);
-                    border: none;
-                    outline: none;
+                span{
+                    position: relative;
+                    display: block;
                 }
 
-                &:focus::after{
-                    transform: rotate(-90deg) translate(-10px);
+                span, span:after, span:before{
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: all 0.3s;
+                    backface-visibility: hidden;
+                    border-radius: 2px;
                 }
+                
+                &.on span{
+                    background-color: transparent;
+                }
+                
+                &.on span:before{
+                    transform: rotate(45deg) translate(-1px, 0px);
+                }
+                
+            
+                 &.on span:after{
+                    transform: rotate(-45deg) translate(6px, -7px);
+                }
+                
             }
         }
 
-        #mobile-menu {
-            height: 100%;
-            width: 250px;
-            background: $color-logo-bg;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 200;
-            display: none;
+        aside {
+            .mobile-menu {
+                height: 100%;
+                width: 300px;
+                background: $color-logo-bg;
+                position: fixed;
+                top: 0;
+                left: -300px;
+                z-index: 100;
+                transition: all 0.2s ease-in;
 
-            & .show {
-                display: block;
-            }
+                &.show {
+                    left: 0;
+                }
 
-            .logo {
-                padding-top: 40px;
-                text-align: center;
-                margin: 0 auto;
-            }
+                .logo {
+                    padding-top: 40px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
 
-            ul {
-                padding: 0;
-                text-decoration: none;
-                list-style-type: none;
-                margin: $margin-basic * 2 auto;
-                text-align: center;
+                ul {
+                    padding: 0;
+                    text-decoration: none;
+                    list-style-type: none;
+                    margin: $margin-basic * 2 auto;
+                    text-align: center;
 
-                li {
-                    text-transform: uppercase;
-                    margin-top: $margin-basic * 2;
+                    li {
+                        text-transform: uppercase;
+                        margin-top: $margin-basic;
+                    }
                 }
             }
         }
@@ -199,7 +211,6 @@
 
             .nav-mobile-button {
                 display: block;
-                
             }
         }
     }
@@ -209,4 +220,10 @@
     .header-content {
         padding-top: $margin-basic;
     }
+
+    .header{.nav{ aside{ 
+        .mobile-menu {
+            left: -500px;
+            width: 100%;
+        }}}}
 }

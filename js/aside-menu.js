@@ -1,11 +1,18 @@
-const menuButton = document.querySelector('.hamburger');
+$(".toggle-mnu").click(function() {
+    $(this).toggleClass("on");
+    $(".main-mnu").slideToggle();
+    return false;
+});
+  
 
-console.log(menuButton);
+
+const menuButton = document.querySelector('.toggle-mnu');
 const menuMobile = document.getElementById('mobile-menu');
 
 console.log(menuMobile);
 
 menuButton.addEventListener('click', function() {
     
-    menuMobile.classList.add('.show');
+    menuMobile.classList.toggle('show');
+
 })

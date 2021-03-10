@@ -254,7 +254,11 @@
             color: $color-p;
         }
     }
-
+@media (max-width: 992px){
+    .about-us-four{
+        min-height: 100vh;
+    }
+}
     
 
 @media (max-width: 425px) {
@@ -267,6 +271,11 @@
             height: 80%;
             width: 300px;
             padding: 0 20px;
+
+            p{
+                margin-top: $margin-basic/2;
+                margin-bottom: $margin-basic + 20px;
+            }
             .logo {
                 width: 100px;
                 height: 100px;
@@ -336,13 +345,8 @@
     }
 
     .about-us-four{
-        min-height: 100vh;
-        width: 100%;
-        background: $carousel-photo top right no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        object-fit: contain;
-        position: relative;
+        
+
 
         h1{
             padding-left: 20px;
